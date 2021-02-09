@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% macro myMacro() %}
+<h0>macro {{name}} </h0>
+{% endmacro %}
+
+{% block content %}
+
+{{ myMacro() }}
+
+
+
+<h1>Setup Page</h1>
+{% endblock content %}

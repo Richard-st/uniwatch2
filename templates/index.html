@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% from "macros.html" import mainImage , smallGallery with context %} 
+
+
+{% block content %}
+<div class="row">
+    <div class="col-md-10">
+    </div>
+    <div class="col-md-2">
+        <span class="badge badge-success">MQTT</span>
+    </div>
+</div>
+
+<div class=row>
+ 
+
+    {{mainImage(pageData)}} 
+
+
+
+    {{smallGallery(pageData)}}
+
+    
+</div>
+
+{% endblock content %} 

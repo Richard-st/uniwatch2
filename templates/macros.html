@@ -1,0 +1,45 @@
+{% macro mainImage(pageData) %}
+
+<div class=col-md-4>
+    <div class="card">
+        <div class="card-header">
+            <h4>
+                {{pageData.imageList[0].timestampStr}}
+            </h4>
+        </div>
+        <div class="card-body">
+            <img class="img-thumbnail card-img-top"  id="currentCameraImage" src="static/images/{{pageData.imageList[0].fileName}}" >
+        </div>
+    </div>
+</div>
+
+{% endmacro %}
+
+{% macro smallGallery(pageData) %}
+
+<div class=col-md-8>
+    {% for imageItem in pageData.imageList %}
+        {% if  (imageItem % 4)  == 0 %}
+        <div class="row ">
+        {% endif %}
+            <div class="col-md-3 d-flex align-items-stretch">
+                <div class="card">
+                    <div class="card-header">
+                        <small>
+                            {{pageData.imageList[imageItem].timestampStr}}
+                        </small>
+                    </div>
+                    <div class="card-body">
+                        <img class="img-thumbnail card-img-top"  id="currentCameraImage" src="static/images/{{pageData.imageList[imageItem].fileName}}" >
+                    </div>
+                </div>                
+            </div>
+        {% if  (imageItem % 4)  == 3 %}
+        </div>
+        {% endif %}
+
+    {% endfor %}
+</div>
+{% endmacro %}
+
+

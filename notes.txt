@@ -1,0 +1,15 @@
+# ViVrtual Environment
+
+python3 -m venv .venv
+
+source .venv/bin/activate
+
+
+#mongo
+
+docker run --name some-mongo -d mongo
+docker run --link d6f7146cdcca:mongo -p 8081:8081 mongo-express
+
+#docker
+
+docker-compose -f mongo.yaml up -d

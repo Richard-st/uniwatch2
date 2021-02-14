@@ -70,12 +70,12 @@ def setup():
 
 if __name__ == '__main__':
 
-    #pushThread = threading.Thread(target=pushToWs)
-    #pushThread.start()
+    pushThread = threading.Thread(target=pushToWs)
+    pushThread.start()
 
 
-    notifyThread = threading.Thread(target=watchWatchdog.notify)
-    notifyThread.start()
+    # notifyThread = threading.Thread(target=watchWatchdog.notify)
+    # notifyThread.start()
     socketio.run(app, host='0.0.0.0')
-    notifyThread.join()
-    #pushThread.join()
+    # notifyThread.join()
+    pushThread.join()

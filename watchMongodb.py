@@ -3,6 +3,7 @@ import logging
 from datetime import datetime
 import ntpath  # used to get filename from path
 
+#mdbClient   = pymongo.MongoClient("mongodb://localhost:27017/",username='root',password='example')
 mdbClient   = pymongo.MongoClient("mongodb://localhost:27017/")
 mdbDB       = mdbClient["camera"] 
 

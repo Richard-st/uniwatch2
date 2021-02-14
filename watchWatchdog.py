@@ -19,7 +19,8 @@ def notify():
     ignore_patterns = ""
     ignore_directories = False
     case_sensitive = False 
-    path = "c://self//UniWatch2//static//images"
+    #path = "c://self//UniWatch2//static//images"
+    path = "//Users//richardstanners//Desktop//self//dev//uniwatch2//static//images"
     go_recursively = True 
     #------------------------
     # Setup watchdog handlers
